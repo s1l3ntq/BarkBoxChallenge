@@ -1,0 +1,7 @@
+<%= render partial: 'thumbnail', collection: @dogs, as: :dog %>
+
+<div>
+<%= link_to "Next Page -->", dogs_path(page: @page + 1)%>
+||
+<%= link_to "<-- Previous Page", dogs_path(page: @page - 1)%> 
+</div>

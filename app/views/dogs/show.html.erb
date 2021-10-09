@@ -1,0 +1,22 @@
+<section>
+  <h2><%= @dog.name %></h2>
+
+  <% @dog.images.each do |image| %>
+    <%= image_tag url_for(image), alt: "Photo of #{@dog.name}" %>
+  <% end %>
+
+    <% if user_signed_in?%>
+        <%if @dog.liked?(@current_user)%>
+            <%= button_to "like", like_path(@dog), method: "put", disabled: true%>
+        <% else%>
+            <%= button_to "like", like_path(@dog), method: "put" %>
+        <%end %>
+    <%end %>
+
+  <p><%= @dog.description %></p>
+  <%# <% if current_user %> %>
+      <%= link_to "Edit #{@dog.name}'s Profile", edit_dog_path %>
+      <br>
+      <%= link_to "Delete #{@dog.name}'s Profile", dog_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%# <%end%> %>
+</section>
