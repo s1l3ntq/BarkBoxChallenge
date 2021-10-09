@@ -1,0 +1,528 @@
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (27.5ms) [0m[32mUploaded file to key: Ko23mUKTrBwFZnbB4ajkqQMu (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (5.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "Ko23mUKTrBwFZnbB4ajkqQMu"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-10-08 02:53:55.589151"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (2.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 1"], ["created_at", "2021-10-08 02:53:55.648167"], ["updated_at", "2021-10-08 02:53:55.648167"]]
+  [1m[36mActiveStorage::Attachment Create (4.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-10-08 02:53:55.651894"]]
+  [1m[36mDog Update (0.2ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:55.657635"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3f174ae7-9b08-4b43-9bab-cff67bac398d) to Async(default) with arguments: #<GlobalID:0x000056285f7165c8 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f174ae7-9b08-4b43-9bab-cff67bac398d] Performing ActiveStorage::AnalyzeJob (Job ID: 3f174ae7-9b08-4b43-9bab-cff67bac398d) from Async(default) with arguments: #<GlobalID:0x000056285f6cbe10 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f174ae7-9b08-4b43-9bab-cff67bac398d] [36m  Disk Storage (4.1ms) [0m[34mDownloaded file from key: Ko23mUKTrBwFZnbB4ajkqQMu[0m
+[36m  Disk Storage (38.8ms) [0m[32mUploaded file to key: NxsfoCWADNLBFsqvi2PLdLR4 (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "NxsfoCWADNLBFsqvi2PLdLR4"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-10-08 02:53:55.763505"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 2"], ["created_at", "2021-10-08 02:53:55.766835"], ["updated_at", "2021-10-08 02:53:55.766835"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 2], ["blob_id", 2], ["created_at", "2021-10-08 02:53:55.767969"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:55.768840"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: cc70ba85-42b1-4533-9e59-607f7ab4303c) to Async(default) with arguments: #<GlobalID:0x000056285f670ce0 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+Processing by DogsController#index as HTML
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cc70ba85-42b1-4533-9e59-607f7ab4303c] Performing ActiveStorage::AnalyzeJob (Job ID: cc70ba85-42b1-4533-9e59-607f7ab4303c) from Async(default) with arguments: #<GlobalID:0x000056285f6fef40 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cc70ba85-42b1-4533-9e59-607f7ab4303c] [36m  Disk Storage (7.5ms) [0m[34mDownloaded file from key: NxsfoCWADNLBFsqvi2PLdLR4[0m
+  Rendering dogs/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dogs/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 172ms (Views: 113.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dogs"[0m
+  [1m[35m (6.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/dogs/new" for 127.0.0.1 at 2021-10-07 21:53:55 -0500
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3f174ae7-9b08-4b43-9bab-cff67bac398d] Error performing ActiveStorage::AnalyzeJob (Job ID: 3f174ae7-9b08-4b43-9bab-cff67bac398d) from Async(default) in 437.9ms: MiniMagick::Error (You must have ImageMagick or GraphicsMagick installed):
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/configuration.rb:139:in `cli'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick.rb:38:in `imagemagick7?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:135:in `executable'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:110:in `command'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:92:in `call'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:38:in `new'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:181:in `identify'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:125:in `raw'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:35:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image.rb:313:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:42:in `rotated_image?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:22:in `block in metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:37:in `block in read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:12:in `block in download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:20:in `open_tempfile_for_blob'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:10:in `download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:35:in `read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/jobs/active_storage/analyze_job.rb:6:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:39:in `block in perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `block in tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:38:in `perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:24:in `block in execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:73:in `block in wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:72:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:22:in `execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cc70ba85-42b1-4533-9e59-607f7ab4303c] Error performing ActiveStorage::AnalyzeJob (Job ID: cc70ba85-42b1-4533-9e59-607f7ab4303c) from Async(default) in 321.04ms: MiniMagick::Error (You must have ImageMagick or GraphicsMagick installed):
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/configuration.rb:139:in `cli'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick.rb:38:in `imagemagick7?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:135:in `executable'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:110:in `command'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:92:in `call'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:38:in `new'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:181:in `identify'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:125:in `raw'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:35:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image.rb:313:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:42:in `rotated_image?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:22:in `block in metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:37:in `block in read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:12:in `block in download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:20:in `open_tempfile_for_blob'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:10:in `download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:35:in `read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/jobs/active_storage/analyze_job.rb:6:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:39:in `block in perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `block in tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:38:in `perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:24:in `block in execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:73:in `block in wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:72:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:22:in `execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+  Rendered dogs/_form.html.erb (101.3ms)
+  Rendered dogs/new.html.erb within layouts/application (165.4ms)
+Completed 200 OK in 1659ms (Views: 1591.4ms | ActiveRecord: 0.0ms)
+Started POST "/dogs" for 127.0.0.1 at 2021-10-07 21:53:57 -0500
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Speck", "description"=>"Just a dog", "image"=>#<ActionDispatch::Http::UploadedFile:0x000056285df6f370 @tempfile=#<Tempfile:/tmp/RackMultipart20211007-11889-1v63qg5.jpg>, @original_filename="speck.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"dog[image]\"; filename=\"speck.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 28402\r\n">}, "commit"=>"Create Dog"}
+Unpermitted parameter: :image
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (7.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Speck"], ["description", "Just a dog"], ["created_at", "2021-10-08 02:53:57.664460"], ["updated_at", "2021-10-08 02:53:57.664460"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (21.3ms) [0m[32mUploaded file to key: 1GW2rwuZWjURSZyqWhePyVAY (checksum: Pnd2i6+BGpFSpRZVY1shbw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "1GW2rwuZWjURSZyqWhePyVAY"], ["filename", "speck.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 28402], ["checksum", "Pnd2i6+BGpFSpRZVY1shbw=="], ["created_at", "2021-10-08 02:53:57.695648"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Create (1.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-10-08 02:53:57.699361"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:57.701776"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: bfd951d1-1302-4bc4-8306-b077dec1a5c1) to Async(default) with arguments: #<GlobalID:0x00005628614f5a08 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 42ms (ActiveRecord: 10.6ms)
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfd951d1-1302-4bc4-8306-b077dec1a5c1] Performing ActiveStorage::AnalyzeJob (Job ID: bfd951d1-1302-4bc4-8306-b077dec1a5c1) from Async(default) with arguments: #<GlobalID:0x000056286150b358 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs/1" for 127.0.0.1 at 2021-10-07 21:53:57 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfd951d1-1302-4bc4-8306-b077dec1a5c1] [36m  Disk Storage (69.5ms) [0m[34mDownloaded file from key: 1GW2rwuZWjURSZyqWhePyVAY[0m
+  Rendering dogs/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered dogs/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 91ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dogs"[0m
+  [1m[35m (10.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (38.8ms) [0m[32mUploaded file to key: DMxUzjtvxEQSeYAvxNTciv4J (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (6.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "DMxUzjtvxEQSeYAvxNTciv4J"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-10-08 02:53:57.872918"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (1.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 3"], ["created_at", "2021-10-08 02:53:57.884326"], ["updated_at", "2021-10-08 02:53:57.884326"]]
+  [1m[36mActiveStorage::Attachment Create (2.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-10-08 02:53:57.887091"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:57.890511"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 19fdada6-413c-418a-9e1c-1b5b3b4d4b40) to Async(default) with arguments: #<GlobalID:0x000056285da88c80 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [19fdada6-413c-418a-9e1c-1b5b3b4d4b40] Performing ActiveStorage::AnalyzeJob (Job ID: 19fdada6-413c-418a-9e1c-1b5b3b4d4b40) from Async(default) with arguments: #<GlobalID:0x000056285da1f848 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs/1/edit" for 127.0.0.1 at 2021-10-07 21:53:57 -0500
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [19fdada6-413c-418a-9e1c-1b5b3b4d4b40] [36m  Disk Storage (60.5ms) [0m[34mDownloaded file from key: DMxUzjtvxEQSeYAvxNTciv4J[0m
+  Rendering dogs/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? ORDER BY "active_storage_attachments"."id" ASC LIMIT ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered dogs/_form.html.erb (7.8ms)
+  Rendered dogs/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 75ms (Views: 10.1ms | ActiveRecord: 0.7ms)
+Started PATCH "/dogs/1" for 127.0.0.1 at 2021-10-07 21:53:57 -0500
+Processing by DogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Speck", "description"=>""}, "commit"=>"Update Dog", "id"=>"1"}
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["name", "Speck"], ["description", ""], ["updated_at", "2021-10-08 02:53:58.001645"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [bfd951d1-1302-4bc4-8306-b077dec1a5c1] Error performing ActiveStorage::AnalyzeJob (Job ID: bfd951d1-1302-4bc4-8306-b077dec1a5c1) from Async(default) in 298.33ms: MiniMagick::Error (You must have ImageMagick or GraphicsMagick installed):
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/configuration.rb:139:in `cli'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick.rb:38:in `imagemagick7?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:135:in `executable'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:110:in `command'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:92:in `call'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:38:in `new'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:181:in `identify'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:125:in `raw'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:35:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image.rb:313:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:42:in `rotated_image?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:22:in `block in metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:37:in `block in read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:12:in `block in download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:20:in `open_tempfile_for_blob'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:10:in `download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:35:in `read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/jobs/active_storage/analyze_job.rb:6:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:39:in `block in perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `block in tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:38:in `perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:24:in `block in execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:73:in `block in wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:72:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:22:in `execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+Started GET "/dogs/1" for 127.0.0.1 at 2021-10-07 21:53:58 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dogs/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms)
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (29.2ms) [0m[32mUploaded file to key: pY8HjhQU5s53KNmdTpXG8gEi (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (4.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "pY8HjhQU5s53KNmdTpXG8gEi"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-10-08 02:53:58.065406"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.6ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 4"], ["created_at", "2021-10-08 02:53:58.073436"], ["updated_at", "2021-10-08 02:53:58.073436"]]
+  [1m[36mActiveStorage::Attachment Create (1.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-10-08 02:53:58.075048"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:58.077585"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 2fbf07c2-5913-470a-927e-582b835812e9) to Async(default) with arguments: #<GlobalID:0x0000562860e6b390 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2fbf07c2-5913-470a-927e-582b835812e9] Performing ActiveStorage::AnalyzeJob (Job ID: 2fbf07c2-5913-470a-927e-582b835812e9) from Async(default) with arguments: #<GlobalID:0x0000562860e36e10 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs/1" for 127.0.0.1 at 2021-10-07 21:53:58 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dogs/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+Started DELETE "/dogs/1" for 127.0.0.1 at 2021-10-07 21:53:58 -0500
+Processing by DogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCACHE Dog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Destroy (0.5ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2fbf07c2-5913-470a-927e-582b835812e9] [36m  Disk Storage (7.6ms) [0m[34mDownloaded file from key: pY8HjhQU5s53KNmdTpXG8gEi[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [19fdada6-413c-418a-9e1c-1b5b3b4d4b40] Error performing ActiveStorage::AnalyzeJob (Job ID: 19fdada6-413c-418a-9e1c-1b5b3b4d4b40) from Async(default) in 194.4ms: MiniMagick::Error (You must have ImageMagick or GraphicsMagick installed):
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/configuration.rb:139:in `cli'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick.rb:38:in `imagemagick7?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:135:in `executable'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:110:in `command'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:92:in `call'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:38:in `new'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:181:in `identify'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:125:in `raw'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:35:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image.rb:313:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:42:in `rotated_image?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:22:in `block in metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:37:in `block in read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:12:in `block in download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:20:in `open_tempfile_for_blob'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:10:in `download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:35:in `read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/jobs/active_storage/analyze_job.rb:6:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:39:in `block in perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `block in tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:38:in `perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:24:in `block in execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:73:in `block in wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:72:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:22:in `execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2fbf07c2-5913-470a-927e-582b835812e9] Error performing ActiveStorage::AnalyzeJob (Job ID: 2fbf07c2-5913-470a-927e-582b835812e9) from Async(default) in 96.72ms: MiniMagick::Error (You must have ImageMagick or GraphicsMagick installed):
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/configuration.rb:139:in `cli'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick.rb:38:in `imagemagick7?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:135:in `executable'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:110:in `command'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:92:in `call'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:38:in `new'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:181:in `identify'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:125:in `raw'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image/info.rb:35:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/mini_magick-4.11.0/lib/mini_magick/image.rb:313:in `[]'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:42:in `rotated_image?'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:22:in `block in metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:37:in `block in read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:12:in `block in download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:20:in `open_tempfile_for_blob'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/downloading.rb:10:in `download_blob_to_tempfile'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:35:in `read_image'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/lib/active_storage/analyzer/image_analyzer.rb:21:in `metadata'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:47:in `extract_metadata_via_analyzer'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/models/active_storage/blob/analyzable.rb:29:in `analyze'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activestorage-5.2.6/app/jobs/active_storage/analyze_job.rb:6:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:39:in `block in perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `block in tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:46:in `tag_logger'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:38:in `perform_now'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:24:in `block in execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:73:in `block in wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/execution_wrapper.rb:87:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/reloader.rb:72:in `wrap'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `instance_exec'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:136:in `run_callbacks'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/execution.rb:22:in `execute'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/activejob-5.2.6/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/qmil/.rvm/gems/ruby-2.5.7/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 0a0aa892-7046-49de-9e36-af73fc73dac8) to Async(default) with arguments: #<GlobalID:0x00005628609f65d0 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Redirected to http://www.example.com/dogs
+Completed 302 Found in 87ms (ActiveRecord: 1.0ms)
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8] Performing ActiveStorage::PurgeJob (Job ID: 0a0aa892-7046-49de-9e36-af73fc73dac8) from Async(default) with arguments: #<GlobalID:0x000056286094e100 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Started GET "/dogs" for 127.0.0.1 at 2021-10-07 21:53:58 -0500
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8]   [1m[36mActiveStorage::Attachment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?[0m  [["blob_id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8]   [1m[36mActiveStorage::Blob Destroy (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8]   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8] [36m  Disk Storage (47.9ms) [0m[31mDeleted file from key: pY8HjhQU5s53KNmdTpXG8gEi[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8] [36m  Disk Storage (1.2ms) [0m[31mDeleted files by key prefix: variants/pY8HjhQU5s53KNmdTpXG8gEi/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [0a0aa892-7046-49de-9e36-af73fc73dac8] Performed ActiveStorage::PurgeJob (Job ID: 0a0aa892-7046-49de-9e36-af73fc73dac8) from Async(default) in 116.39ms
+  Rendered collection of dogs/_thumbnail.html.erb [0 times] (0.0ms)
+  Rendered dogs/index.html.erb within layouts/application (118.2ms)
+Completed 200 OK in 121ms (Views: 119.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dogs"[0m
+  [1m[35m (9.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (31.0ms) [0m[32mUploaded file to key: G6yXVCPfMhPT31oYY1yRV6wC (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (6.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "G6yXVCPfMhPT31oYY1yRV6wC"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-10-08 02:53:58.365702"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.8ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 5"], ["created_at", "2021-10-08 02:53:58.375036"], ["updated_at", "2021-10-08 02:53:58.375036"]]
+  [1m[36mActiveStorage::Attachment Create (2.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-10-08 02:53:58.377022"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:58.380912"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5445777b-ac39-4a97-a3d2-9e3167cef631) to Async(default) with arguments: #<GlobalID:0x00005628602e0ef8 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5445777b-ac39-4a97-a3d2-9e3167cef631] Performing ActiveStorage::AnalyzeJob (Job ID: 5445777b-ac39-4a97-a3d2-9e3167cef631) from Async(default) with arguments: #<GlobalID:0x000056286028e3d8 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5445777b-ac39-4a97-a3d2-9e3167cef631] [36m  Disk Storage (5.4ms) [0m[34mDownloaded file from key: G6yXVCPfMhPT31oYY1yRV6wC[0m
+[36m  Disk Storage (32.8ms) [0m[32mUploaded file to key: PtAgi5RGEVUgSa5qLYur4uTt (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "PtAgi5RGEVUgSa5qLYur4uTt"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-10-08 02:53:58.428861"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 6"], ["created_at", "2021-10-08 02:53:58.433429"], ["updated_at", "2021-10-08 02:53:58.433429"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 2], ["blob_id", 2], ["created_at", "2021-10-08 02:53:58.434964"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-10-08 02:53:58.436242"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 965a9a31-0926-45c1-aa3c-486d477e1527) to Async(default) with arguments: #<GlobalID:0x00005628600d0fa0 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [965a9a31-0926-45c1-aa3c-486d477e1527] Performing ActiveStorage::AnalyzeJob (Job ID: 965a9a31-0926-45c1-aa3c-486d477e1527) from Async(default) with arguments: #<GlobalID:0x0000562860068b58 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+Started GET "/" for 127.0.0.1 at 2021-10-07 21:53:58 -0500
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? ORDER BY "active_storage_attachments"."id" ASC LIMIT ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? ORDER BY "active_storage_attachments"."id" ASC LIMIT ?[0m  [["record_id", 2], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of dogs/_thumbnail.html.erb [2 times] (9.8ms)
+  Rendered dogs/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (8.2ms)[0m  [1m[31mrollback transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [965a9a31-0926-45c1-aa3c-486d477e1527] [36m  Disk Storage (13.8ms) [0m[34mDownloaded file from key: PtAgi5RGEVUgSa5qLYur4uTt[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [965a9a31-0926-45c1-aa3c-486d477e1527] Performed ActiveStorage::AnalyzeJob (Job ID: 965a9a31-0926-45c1-aa3c-486d477e1527) from Async(default) in 38.1ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5445777b-ac39-4a97-a3d2-9e3167cef631] Performed ActiveStorage::AnalyzeJob (Job ID: 5445777b-ac39-4a97-a3d2-9e3167cef631) from Async(default) in 95.44ms
